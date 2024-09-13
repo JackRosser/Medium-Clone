@@ -54,10 +54,14 @@ h1 {
   font-size: 7rem;
   font-weight: 400;
   letter-spacing: -5px;
+  text-align: left;
+  line-height: 1;
 }
 
 h2 {
   font-weight: 400;
+  text-align: left;
+  margin-block: 2rem;
 }
 
 button {
@@ -132,14 +136,19 @@ section {
   max-height: calc(60vh - 94px);
   display: flex;
   justify-content: flex-end;
+  border-bottom: 1px solid #191919;
+}
+
+section > div {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 svg {
   display: block;
   max-height: calc(60vh - 94px);
   margin-right: 0;
-}
-
-.svg_box {
-  border: 1px solid red;
 }

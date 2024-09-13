@@ -26,3 +26,82 @@ VERDE = #1a8917
 body::-webkit-scrollbar {
   display: none;
 }
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+body a {
+  text-decoration: none;
+  color: #191919;
+  padding: 0.5rem;
+}
+
+body a:hover {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+body a:active {
+  color: #ffc017;
+}
+
+/* UTILITIES */
+
+/* HEADER */
+
+nav,
+section {
+  background-color: #ffc017;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid #191919;
+}
+
+nav > a:hover {
+  background-color: initial;
+  transform: scale(1.1);
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+
+nav > a:active {
+  background-color: initial;
+  transform: scale(1.2);
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  display: block;
+  margin-inline: 1rem;
+}
+
+nav ul li:last-child a {
+  background-color: #191919;
+  color: white;
+  padding: 1rem 1.75rem;
+  border-radius: 30px;
+}
+
+nav ul li:last-child a:hover {
+  background-color: white;
+  color: #191919;
+}
+
+nav ul li:last-child a:active {
+  background-color: white;
+  color: #191919;
+  padding: 1rem 1.75rem;
+  border-radius: 30px;
+}

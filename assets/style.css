@@ -187,7 +187,6 @@ aside h3 img {
 }
 
 .trending_card {
-  border: 1px solid red;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -211,7 +210,6 @@ aside h3 img {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   font-weight: 400;
 }
 
@@ -224,4 +222,7 @@ aside h3 img {
 }
 
 .informations {
+  color: gray;
+  display: flex;
+  justify-content: flex-start;
 }

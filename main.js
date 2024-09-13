@@ -8,7 +8,8 @@ let mainContent = [
     sinossi: "What we consider “old” changes dramatically with age, and our perspectives can be predictive of how well we age",
     date: "Oct 27 ·&nbsp;",
     read: "&nbsp;5 min read ·&nbsp;",
-    mainImage: ""
+    mainImage: "",
+    category: "Aging"
   },
   {
     pic: "",
@@ -17,7 +18,8 @@ let mainContent = [
     sinossi: "Can you speak about your trauma if you don't look traumatized?",
     date: "Oct 24 ·&nbsp;",
     read: "&nbsp;6 min read ·&nbsp;",
-    mainImage: ""
+    mainImage: "",
+    category: "Health"
   },
   {
     pic: "",
@@ -26,7 +28,8 @@ let mainContent = [
     sinossi: "Software Engineer, yours is the right to produce high-quality work at all times, also the liability.",
     date: "Oct 15 ·&nbsp;",
     read: "&nbsp;5 min read ·&nbsp;",
-    mainImage: ""
+    mainImage: "",
+    category: "Software Engineering"
   },
   {
     pic: "",
@@ -35,7 +38,8 @@ let mainContent = [
     sinossi: "How product designers can break from the status quo and help our planet",
     date: "Oct 25 ·&nbsp;",
     read: "&nbsp;11 min read ·&nbsp;",
-    mainImage: ""
+    mainImage: "",
+    category: "Sustanbility"
   },
   {
     pic: "",
@@ -44,7 +48,8 @@ let mainContent = [
     sinossi: "Bruce Lee is reported to have said, “I fear not the man who has practiced 10,000 kicks once, but the man who has practiced one kick 10,000...",
     date: "Oct 26 ·&nbsp;",
     read: "&nbsp;7 min read ·&nbsp;",
-    mainImage: ""
+    mainImage: "",
+    category: "Learning"
   },
   {
     pic: "",
@@ -53,7 +58,8 @@ let mainContent = [
     sinossi: "Lock a group of people in a room and you’ll witness some surprising confessions",
     date: "Jan 18 ·&nbsp;",
     read: "&nbsp;6 min read ·&nbsp;",
-    mainImage: ""
+    mainImage: "",
+    category: "Experiences"
   },
   {
     pic: "",
@@ -62,7 +68,8 @@ let mainContent = [
     sinossi: "With more people working in remote and hybrid environments than ever before, company, team and individual goals must be explicit and…",
     date: "Oct 24 ·&nbsp;",
     read: "&nbsp;6 min read ·&nbsp;",
-    mainImage: ""
+    mainImage: "",
+    category: "Productivity"
   }
 ];
 
@@ -71,7 +78,7 @@ for (let i = 0; i < mainContent.length; i++) {
   mainContent[i].mainImage = `./assets/imgs/image0${i + 8}.jpeg`;
 }
 
-let creation = function (pic, author, sinossi, title, date, read, mainImage) {
+let creation = function (pic, author, sinossi, title, date, read, category, bookImage) {
   let leftSectionCard = document.createElement("div");
   leftSectionCard.className = "left_section_card";
 
@@ -92,4 +99,42 @@ let creation = function (pic, author, sinossi, title, date, read, mainImage) {
   // _______________________________________
   let titleBook = document.createElement("h2");
   titleBook.innerText = title;
+  // _______________________________________
+  let sinox = document.createElement("p");
+  sinox.innerText = sinossi;
+  // _______________________________________
+  let leftSectionCardInfo = document.createElement("div");
+  leftSectionCardInfo.className = "left_section_card_info";
+
+  let dateInfo = document.createElement("p");
+  dateInfo.innerText = date;
+
+  let read = document.createElement("p");
+  read.innerText = read;
+
+  let categoryButton = document.createElement("div");
+  categoryButton.className = "category_button";
+  categoryButton.innerText = category;
+
+  let star = document.createElement("img");
+  star.src = "./assets/imgs/svg/star.svg";
+  star.alt = "star image";
+
+  let bookmark = document.createElement("img");
+  bookmark.src = "./assets/imgs/svg/bookmark.svg";
+  bookmark.alt = "bookmark";
+  bookmark.className = "bookmark";
+
+  let bookImage = document.createElement("img");
+  bookmark.src = bookImage;
+  bookmark.alt = "book image";
+  bookmark.className = "left_author_image";
+
+  // append tutto
+
+  leftSectionCardAuthor.append(authorImage, authorName);
+  leftSectionCardInfo.append(dateInfo, read, categoryButton, star);
+  leftBlock.append(leftSectionCardAuthor, titleBook, sinox, leftSectionCardInfo);
+  leftSectionCard.append(leftBlock, bookmark, bookImage);
+  leftSection.appendChild(leftSectionCard);
 };

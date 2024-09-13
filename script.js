@@ -285,7 +285,7 @@ window.onload = function () {
     } else {
       nav.classList.remove("scroll_nav");
       nav.classList.add("top");
-      ulLast.style.backgroundColor = "#191919";
+      ulLast.style.backgroundColor = "";
     }
 
     // Controllo per la sezione destra: diventa fixed quando tocca la nav

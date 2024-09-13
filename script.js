@@ -272,6 +272,7 @@ window.onload = function () {
   let rightSectionInitialOffset = rightSection.offsetTop; // Posizione iniziale della sezione destra
   let navHeight = nav.offsetHeight; // Altezza della nav
   let main = document.querySelector("main");
+  let ulLast = document.querySelector(".top ul li:last-child a");
 
   window.addEventListener("scroll", function () {
     const scrollPosition = window.scrollY;
@@ -280,9 +281,11 @@ window.onload = function () {
     if (scrollPosition > 100) {
       nav.classList.remove("top");
       nav.classList.add("scroll_nav");
+      ulLast.style.backgroundColor = "#538724";
     } else {
       nav.classList.remove("scroll_nav");
       nav.classList.add("top");
+      ulLast.style.backgroundColor = "#191919";
     }
 
     // Controllo per la sezione destra: diventa fixed quando tocca la nav

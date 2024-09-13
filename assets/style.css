@@ -315,10 +315,13 @@ main li a {
   align-items: center;
 }
 
+#left_div {
+  max-width: 80%;
+}
+
 .left_section_card {
   display: flex;
   justify-content: space-between;
-  max-width: 80%;
   align-items: flex-end;
   gap: 1rem;
 }

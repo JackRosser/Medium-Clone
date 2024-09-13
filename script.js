@@ -266,4 +266,21 @@ window.onload = function () {
       mainContent[i].mainImage
     );
   }
+
+  // SCROLL DELLA NAV
+
+  let nav = document.querySelector("nav");
+  nav.classList.add("top");
+
+  window.addEventListener("scroll", function () {
+    const scrollPosition = window.scrollY; // Ottiene la posizione di scroll attuale
+
+    if (scrollPosition > 100) {
+      nav.classList.remove("top");
+      nav.classList.add("scroll_nav");
+    } else {
+      nav.classList.remove("scroll_nav");
+      nav.classList.add("top");
+    }
+  });
 };

@@ -97,55 +97,115 @@ button {
 
 /* HEADER */
 
-header nav,
+.top,
 header section {
   background-color: #ffc017;
 }
 
-nav {
+.top {
   display: flex;
   justify-content: space-around;
   padding-block: 1.5rem;
   border-bottom: 1px solid #191919;
 }
 
-nav > a:hover {
+.top > a:hover {
   background-color: initial;
   transform: scale(1.1);
   transition-property: transform;
   transition-duration: 300ms;
 }
 
-nav > a:active {
+.top > a:active {
   background-color: initial;
   transform: scale(1.2);
   transition-property: transform;
   transition-duration: 300ms;
 }
 
-nav ul {
+.top ul {
   display: flex;
   align-items: center;
 }
 
-nav ul li {
+.top ul li {
   display: block;
   margin-inline: 1rem;
 }
 
-nav ul li:last-child a {
+.top ul li:last-child a {
   background-color: #191919;
   color: white;
   padding: 1rem 1.75rem;
   border-radius: 30px;
 }
 
-nav ul li:last-child a:hover {
+.top ul li:last-child a:hover {
   background-color: white;
   color: #191919;
 }
 
-nav ul li:last-child a:active {
+.top ul li:last-child a:active {
+  background-color: white;
+  color: #191919;
+  padding: 1rem 1.75rem;
+  border-radius: 30px;
+}
+
+/* HEADER ON SCROLL */
+
+.scroll_nav {
+  background-color: white;
+}
+
+.scroll_nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid #191919;
+}
+
+.scroll_nav > a:hover {
+  background-color: initial;
+  transform: scale(1.1);
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+
+.scroll_nav > a:active {
+  background-color: initial;
+  transform: scale(1.2);
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+
+.scroll_nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.scroll_nav ul li {
+  display: block;
+  margin-inline: 1rem;
+}
+
+.scroll_nav ul li:last-child a {
+  background-color: #191919;
+  color: white;
+  padding: 1rem 1.75rem;
+  border-radius: 30px;
+}
+
+.scroll_nav ul li:last-child a:hover {
+  background-color: white;
+  color: #191919;
+}
+
+.scroll_nav ul li:last-child a:active {
   background-color: white;
   color: #191919;
   padding: 1rem 1.75rem;

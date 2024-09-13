@@ -64,6 +64,11 @@ h2 {
   margin-block: 2rem;
 }
 
+h4 {
+  font-size: 1.5rem;
+  margin-block: 0.5rem;
+}
+
 button {
   cursor: pointer;
   background-color: #191919;
@@ -157,15 +162,66 @@ svg {
 
 aside {
   height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 aside h3 {
   display: flex;
   align-items: center;
   border: 1px solid red;
+  margin-bottom: 1rem;
 }
 
 aside h3 img {
   transform: scale(1.7);
   margin-right: 2rem;
+}
+
+/* CARDS */
+
+#cards__box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trending_card {
+  border: 1px solid red;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.trending_card_num {
+  color: #e6e7e7;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif; /* più o meno dai.... Sicuramente non è il roboto */
+  margin-right: 1rem;
+  font-weight: 700;
+}
+
+.informations_box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  font-weight: 400;
+}
+
+.author img {
+  border-radius: 50%;
+  margin-right: 1rem;
+  height: 35px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.informations {
 }

@@ -49,6 +49,26 @@ body a:active {
 
 /* UTILITIES */
 
+h1 {
+  font-family: "Spectral", serif;
+  font-size: 7rem;
+  font-weight: 400;
+  letter-spacing: -5px;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+  background-color: #191919;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding: 0.8rem 3rem;
+  border-radius: 25px;
+}
+
 /* HEADER */
 
 nav,
@@ -104,4 +124,22 @@ nav ul li:last-child a:active {
   color: #191919;
   padding: 1rem 1.75rem;
   border-radius: 30px;
+}
+
+/* SECTION */
+
+section {
+  max-height: calc(60vh - 94px);
+  display: flex;
+  justify-content: flex-end;
+}
+
+svg {
+  display: block;
+  max-height: calc(60vh - 94px);
+  margin-right: 0;
+}
+
+.svg_box {
+  border: 1px solid red;
 }

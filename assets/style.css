@@ -456,3 +456,12 @@ nav {
   transition-duration: 300ms;
   transition-property: background-color, position;
 }
+
+.scroll_nav li a:hover {
+  color: blue;
+}
+
+.scroll_nav ul li:last-child a:hover {
+  color: #ffc017;
+  background-color: black;
+}

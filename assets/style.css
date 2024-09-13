@@ -454,5 +454,5 @@ main li a:hover {
 
 nav {
   transition-duration: 300ms;
-  transition-property: background-color;
+  transition-property: background-color, position;
 }

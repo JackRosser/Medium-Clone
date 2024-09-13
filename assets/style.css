@@ -65,7 +65,7 @@ h2 {
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-block: 0.5rem;
 }
 
@@ -80,8 +80,8 @@ button {
 
 /* HEADER */
 
-nav,
-section {
+header nav,
+header section {
   background-color: #ffc017;
 }
 
@@ -135,16 +135,16 @@ nav ul li:last-child a:active {
   border-radius: 30px;
 }
 
-/* SECTION */
+/* HEADER SECTION */
 
-section {
+header section {
   height: calc(60vh - 94px);
   display: flex;
   justify-content: flex-end;
   border-bottom: 1px solid #191919;
 }
 
-section > div {
+header section > div {
   margin-left: auto;
   display: flex;
   flex-direction: column;
@@ -234,4 +234,12 @@ aside h3 img {
   color: gray;
   display: flex;
   justify-content: flex-start;
+}
+
+/* MAIN SECTION */
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid lightgray;
 }

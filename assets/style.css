@@ -133,7 +133,7 @@ nav ul li:last-child a:active {
 /* SECTION */
 
 section {
-  max-height: calc(60vh - 94px);
+  height: calc(60vh - 94px);
   display: flex;
   justify-content: flex-end;
   border-bottom: 1px solid #191919;
@@ -151,4 +151,21 @@ svg {
   display: block;
   max-height: calc(60vh - 94px);
   margin-right: 0;
+}
+
+/* TRENDING OF MEDIUM */
+
+aside {
+  height: 40vh;
+}
+
+aside h3 {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+}
+
+aside h3 img {
+  transform: scale(1.7);
+  margin-right: 2rem;
 }

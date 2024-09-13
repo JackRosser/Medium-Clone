@@ -1,6 +1,16 @@
-let elemento = document.querySelector("nav");
-let larghezzaTotale = elemento.offsetWidth;
-let altezzaTotale = elemento.offsetHeight;
+let trendingCard = [
+  {
+    num: "",
+    img: "./assets/imgs/image01.jpeg",
+    name: "Tom Cooper",
+    title: "Ukraine War, 23 October 2022",
+    published: "Oct 23",
+    read: " . 5min read"
+  }
+];
 
-console.log("Larghezza totale: ", larghezzaTotale);
-console.log("Altezza totale: ", altezzaTotale);
+for (let i = 0; i < trendingCard.length; i++) {
+  trendingCard[i].num = i + 1;
+}
+
+console.log(trendingCard[0].num);

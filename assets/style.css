@@ -451,3 +451,8 @@ main li a:hover {
 .main_start {
   justify-content: flex-start;
 }
+
+nav {
+  transition-duration: 300ms;
+  transition-property: background-color;
+}

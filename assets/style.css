@@ -429,7 +429,7 @@ main li a {
 
 .fixed-right {
   position: fixed;
-  top: 94px;
+  top: 100px;
   right: 0;
   width: 40vw;
   height: calc(100vh - 94px);

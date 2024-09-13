@@ -350,6 +350,12 @@ main button {
   display: block;
 }
 
+main button:hover {
+  background-color: gray;
+  color: white;
+  border: 1px solid gray;
+}
+
 #right_section ul {
   display: flex;
   flex-wrap: wrap;
@@ -364,6 +370,10 @@ main button {
 main li a {
   color: gray;
   text-transform: capitalize;
+}
+
+main li a:hover {
+  color: black;
 }
 
 /* LEFT SECTION */

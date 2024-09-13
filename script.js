@@ -281,11 +281,9 @@ window.onload = function () {
     if (scrollPosition > 100) {
       nav.classList.remove("top");
       nav.classList.add("scroll_nav");
-      ulLast.style.backgroundColor = "#538724";
     } else {
       nav.classList.remove("scroll_nav");
       nav.classList.add("top");
-      ulLast.style.backgroundColor = "";
     }
 
     // Controllo per la sezione destra: diventa fixed quando tocca la nav

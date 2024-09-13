@@ -461,7 +461,12 @@ nav {
   color: blue;
 }
 
+.scroll_nav ul li:last-child a {
+  background-color: #538724;
+  color: white;
+}
+
 .scroll_nav ul li:last-child a:hover {
-  color: #ffc017;
-  background-color: black;
+  background-color: #ffc017;
+  color: white;
 }

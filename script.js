@@ -267,20 +267,31 @@ window.onload = function () {
     );
   }
 
-  // SCROLL DELLA NAV
-
   let nav = document.querySelector("nav");
-  nav.classList.add("top");
+  let rightSection = document.getElementById("right_section");
+  let rightSectionInitialOffset = rightSection.offsetTop; // Posizione iniziale della sezione destra
+  let navHeight = nav.offsetHeight; // Altezza della nav
+  let main = document.querySelector("main");
 
   window.addEventListener("scroll", function () {
-    const scrollPosition = window.scrollY; // Ottiene la posizione di scroll attuale
+    const scrollPosition = window.scrollY;
 
+    // Controllo per la navbar
     if (scrollPosition > 100) {
       nav.classList.remove("top");
       nav.classList.add("scroll_nav");
     } else {
       nav.classList.remove("scroll_nav");
       nav.classList.add("top");
+    }
+
+    // Controllo per la sezione destra: diventa fixed quando tocca la nav
+    if (scrollPosition >= rightSectionInitialOffset - navHeight) {
+      rightSection.classList.add("fixed-right");
+      main.classList.add("main_start");
+    } else {
+      rightSection.classList.remove("fixed-right");
+      main.classList.remove("main_start");
     }
   });
 };

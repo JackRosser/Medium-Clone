@@ -384,6 +384,7 @@ main li a {
   justify-content: space-between;
   align-items: flex-end;
   gap: 1rem;
+  margin-bottom: 4rem;
 }
 
 .left_section_card_author {
@@ -422,4 +423,21 @@ main li a {
 
 .left_author_image {
   max-width: 300px;
+}
+
+/* FIXED RIGHT SECTION */
+
+.fixed-right {
+  position: fixed;
+  top: 94px;
+  right: 0;
+  width: 40vw;
+  height: calc(100vh - 94px);
+  z-index: 2;
+}
+
+/* classe che sposta in flex start */
+
+.main_start {
+  justify-content: flex-start;
 }

@@ -54,10 +54,52 @@ let trendingCard = [
 
 for (let i = 0; i < trendingCard.length; i++) {
   trendingCard[i].num = "0" + (i + 1);
-  trendingCard[i].img = `./assets/imgs/image${i + 1}.jpeg`;
+  trendingCard[i].img = `./assets/imgs/image0${i + 1}.png`;
 }
 
-let aside = document.querySelector("aside")
-window.onload(function {
+let cardBox = document.getElementById("cards__box");
 
-})
+let cardCreation = function (indexNum, indexImg, indexName, indexTitle, indexDate, indexRead) {
+  //_______________________________________________________________
+  let trendingCardBox = document.createElement("div");
+  trendingCardBox.className = "trending_card";
+  //_______________________________________________________________
+  let cardNum = document.createElement("div");
+  cardNum.className = "trending_card_num";
+  cardNum.innerText = indexNum;
+  //_______________________________________________________________
+  let informationsBox = document.createElement("div");
+  informationsBox.className = "informations_box";
+  let author = document.createElement("div");
+  author.className = "author";
+  let authorImg = document.createElement("img");
+  authorImg.className = "author_image";
+  authorImg.src = indexImg;
+  authorImg.alt = `${indexName} image`;
+  let authorName = document.createElement("p");
+  authorName.innerText = indexName;
+  //_______________________________________________________________
+  let title = document.createElement("h4");
+  title.innerText = indexTitle;
+  //_______________________________________________________________
+  let informations = document.createElement("div");
+  informations.className = "informations";
+  let date = document.createElement("p");
+  date.innerText = indexDate;
+  let read = document.createElement("p");
+  read.innerText = indexRead;
+
+  // UNIONE DI TUTTO
+
+  informations.append(date, read);
+  author.append(authorImg, authorName);
+  informationsBox.append(author, title, informations);
+  trendingCardBox.append(cardNum, informationsBox);
+  cardBox.appendChild(trendingCardBox);
+};
+
+window.onload = function () {
+  for (let i = 0; i < trendingCard.length; i++) {
+    cardCreation(trendingCard[i].num, trendingCard[i].img, trendingCard[i].name, trendingCard[i].title, trendingCard[i].published, trendingCard[i].read);
+  }
+};
